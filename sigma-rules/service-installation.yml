@@ -1,0 +1,25 @@
+title: Service Installation Detection
+
+id: 33333333-3333-3333-3333-333333333333
+
+status: experimental
+
+description: Detects new service installation on Windows
+
+author: Mahi Surani
+
+logsource:
+  product: windows
+  service: system
+
+detection:
+  selection:
+    EventID: 7045
+
+  condition: selection
+
+level: high
+
+tags:
+  - attack.persistence
+  - attack.t1543

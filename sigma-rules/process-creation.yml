@@ -1,0 +1,25 @@
+title: Suspicious Process Creation
+
+id: 22222222-2222-2222-2222-222222222222
+
+status: experimental
+
+description: Detects process creation events
+
+author: Mahi Surani
+
+logsource:
+  product: windows
+  service: security
+
+detection:
+  selection:
+    EventID: 4688
+
+  condition: selection
+
+level: low
+
+tags:
+  - attack.execution
+  - attack.t1059
