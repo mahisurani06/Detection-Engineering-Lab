@@ -1,0 +1,23 @@
+title: Security Log Cleared Detection
+
+id: 22222222-2222-2222-2222-222222222222
+
+status: experimental
+
+description: Detects clearing of Windows Security logs
+
+logsource:
+  product: windows
+  service: security
+
+detection:
+  selection:
+    EventID: 1102
+
+  condition: selection
+
+level: high
+
+tags:
+  - attack.defense_evasion
+  - attack.t1070
